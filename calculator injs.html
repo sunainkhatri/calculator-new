@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+
+
+    
+    <script>
+        var a=0;
+        var ch= ``;
+
+        function getadd(str){
+
+            a=parseInt(document.getElementById("f").value);
+            document.getElementById("f").value=" ";
+            ch='+';
+        }
+
+        function getsub(){
+            a=parseInt(document.getElementById("f").value);
+            document.getElementById("f").value="";
+            ch=`-`;
+
+
+        }
+
+
+        function getmul(){
+            a=parseInt(document.getElementById("f").value);
+            document.getElementById("f").value=" ";
+            ch='*';
+
+
+        }
+
+        function getdivide(){
+            a=parseInt(document.getElementById("f").value);
+            document.getElementById("f").value=" ";
+            ch='/';
+
+
+        }
+
+        function getopr(){
+var b=parseInt(document.getElementById("f").value);
+var c=0;
+if(ch==`+`)
+c=a+b;
+if(ch==`-`)
+c=a-b;
+if(ch==`*`)
+c=a*b;
+if(ch==`/`)
+c=a/b;
+document.getElementById("f").value=c;
+
+        }
+        function getdata(str){
+            document.getElementById("f").value+=str;
+
+        }
+        function cl(){
+
+        document.getElementById("f").value="";
+        }
+
+    </script>
+    <body><center>
+        <div class="container">
+    <div class="calsi">
+        <input type="text" id="f">
+        <input type="button" value="cls" onclick="cl()">
+    
+        <br><br>
+        <input type="button" value="1" onclick="getdata(1)">&nbsp; &nbsp; &nbsp;
+        <input type="button" value="2" onclick="getdata(2)">&nbsp; &nbsp; &nbsp;
+        <input type="button" value="3" onclick="getdata(3)">&nbsp; &nbsp; &nbsp;
+        <input type="button" value="+" onclick="getadd()">&nbsp; &nbsp; &nbsp;
+<br><br>
+        <input type="button" value="4" onclick="getdata(4)">&nbsp; &nbsp; &nbsp;
+        <input type="button" value="5" onclick="getdata(5)">&nbsp; &nbsp; &nbsp;
+        <input type="button" value="6" onclick="getdata(6)">&nbsp; &nbsp; &nbsp;
+        <input type="button" value="-" onclick="getsub()">&nbsp; &nbsp; &nbsp;
+<br><br>
+        <input type="button" value="7" onclick="getdata(7)">&nbsp; &nbsp; &nbsp;
+        <input type="button" value="8" onclick="getdata(8)">&nbsp; &nbsp; &nbsp;
+        <input type="button" value="9" onclick="getdata(9)">&nbsp; &nbsp; &nbsp;
+        <input type="button" value="*" onclick="getmul()">&nbsp; &nbsp; &nbsp;
+        <br><br>
+        <input type="button" value="/" onclick="getdivide()">&nbsp; &nbsp; &nbsp;
+        <input type="button" value=".">&nbsp; &nbsp; &nbsp;
+        <input type="button" value="=" onclick="getopr()">&nbsp; &nbsp; &nbsp;
+        <input type="button" value="" onclick="getdata(0)">&nbsp; &nbsp; &nbsp;
+        </div>
+</body>
+</center>
+</html>
